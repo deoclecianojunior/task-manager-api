@@ -6,7 +6,7 @@ RSpec.describe 'Task API', type: :request do
 	let!(:user) { FactoryGirl.create(:user) }
 	let(:headers) do
 		{
-			'Accept' => 'application/vnd.taskmanager.v1',
+			'Accept' => 'application/vnd.taskmanager.v2',
 			'Content-Type' => Mime[:json].to_s,
 			'Authorization' => user.auth_token
 		}

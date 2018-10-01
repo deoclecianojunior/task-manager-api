@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe 'Users API', type: :request do
 	let!(:user) { create(:user) }
 	let(:user_id) { user.id }
-	let!(:headers) do
+	let(:headers) do
 		{
-			'Accept' => 'application/vnd.taskmanager.v1',
+			'Accept' => 'application/vnd.taskmanager.v2',
 			'Content-Type' => Mime[:json].to_s,
 			'Authorization' => user.auth_token
 		}
 	end
 
-	before { host! 'api.task-manager.test' }
+	before { host! 'api.taskmanager.test' }
 
 	describe 'GET /users/:id' do
 		before do
