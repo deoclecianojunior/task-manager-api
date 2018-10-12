@@ -12,7 +12,7 @@ RSpec.describe 'Session API', type: :request do
 
 	describe 'POST /session' do
 		before do
-			post '/sessions', params: {session: credentials}.to_json, headers: headers
+			post '/sessions', params: { session: credentials }.to_json, headers: headers
 		end
 
 		context 'when the credentials are correct' do
